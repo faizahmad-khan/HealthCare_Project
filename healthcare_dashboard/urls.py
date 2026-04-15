@@ -11,4 +11,7 @@ urlpatterns = [
     path('doctors/', include('healthcare_dashboard.doctors.urls')),
     path('appointments/', include('healthcare_dashboard.appointments.urls')),
     path('pharmacy/', include('healthcare_dashboard.pharmacy.urls')),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
