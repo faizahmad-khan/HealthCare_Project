@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+env/
+venv/
+.venv/
+
+# Local database and media
+*.sqlite3
+db.sqlite3
+media/
+
+# Django collectstatic output
+staticfiles/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Editor / tooling
+.vscode/
+.vercel/
