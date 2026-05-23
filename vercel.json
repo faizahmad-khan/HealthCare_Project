@@ -2,11 +2,13 @@
   "version": 2,
   "builds": [
     {
-      "src": "healthcare_dashboard/wsgi.py",
+      "src": "api/asgi.py",
       "use": "@vercel/python",
       "config": {
         "runtime": "python3.11",
-        "maxLambdaSize": "15mb"
+        "maxLambdaSize": "15mb",
+        "installCommand": "python -m pip install --upgrade pip && python -m pip install --break-system-packages -r requirements.txt",
+        "buildCommand": "python manage.py collectstatic --noinput"
       }
     },
     {
@@ -20,11 +22,11 @@
   "routes": [
     {
       "src": "/static/(.*)",
-      "dest": "/$1"
+      "dest": "/static/$1"
     },
     {
       "src": "/(.*)",
-      "dest": "healthcare_dashboard/wsgi.py"
+      "dest": "/api/asgi.py"
     }
   ]
 }
