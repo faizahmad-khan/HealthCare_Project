@@ -24,3 +24,38 @@ staticfiles/
 # Editor / tooling
 .vscode/
 .vercel/
+
+# Byte-compiled / build
+pip-wheel-metadata/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Testing
+.coverage
+coverage.xml
+htmlcov/
+.tox/
+.pytest_cache/
+
+# IDEs
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python env
+.python-version
+celerybeat-schedule
+
+# Misc
+*.log
+*.pot
+local_settings.py
